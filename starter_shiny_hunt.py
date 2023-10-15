@@ -81,6 +81,9 @@ def shiny_hunt_loop(pyboy, memory_service):
             state = open(f"roms/crystal.gbc.state", "rb")
             pyboy.load_state(state)
         else:
+            memory_service.print_first_party_pokemon_info(current_attempts)
+            state = open("roms/crystal.gbc.state", "wb")
+            pyboy.save_state(state)
             with shiny_found_lock:  # Acquire the lock to update shiny_found
                 shiny_found = True  # Set shiny_found to True when a shiny is found
 
