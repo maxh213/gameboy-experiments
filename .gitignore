@@ -5,6 +5,7 @@ __pycache__/
 
 /roms/
 /screenshots/
+log.txt
 
 # C extensions
 *.so
